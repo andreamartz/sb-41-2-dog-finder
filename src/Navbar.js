@@ -5,6 +5,7 @@ import "./Navbar.css";
 function Navbar({ dogs }) {
   return (
     <nav className="Navbar">
+      <NavLink className="Navbar-NavLink" exact to="/dogs">Home</NavLink>
       {dogs.map(dog => {
         return (
           <NavLink className="Navbar-NavLink" exact to={`/dogs/${dog.name}`}>

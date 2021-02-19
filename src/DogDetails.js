@@ -1,11 +1,8 @@
 import React from "react";
-import { useParams, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import "./DogDetails.css";
 
-function DogDetails({ dogs }) {
-  const { name } = useParams();   // hold the name of the current dog (in url path)
-  const [ dog ] = dogs.filter(dog => dog.name === name);
-
+function DogDetails({ dog }) {
   if (!dog) return <Redirect to="/dogs"/>
 
   return (

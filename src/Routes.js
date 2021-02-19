@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom"
 import DogList from "./DogList";
-import DogDetails from "./DogDetails";
+import FilterDogDetails from "./FilterDogDetails";
 
 function Routes({ dogs }) {
   return (
@@ -10,7 +10,7 @@ function Routes({ dogs }) {
         <DogList dogs={dogs}/>
       </Route>
       <Route exact path="/dogs/:name">
-        <DogDetails dogs={dogs}/>
+        <FilterDogDetails dogs={dogs}/>
       </Route>
       <Redirect to="/dogs" />  {/* matches if nothing above matched*/}
     </Switch>
