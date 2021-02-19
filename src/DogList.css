@@ -1,0 +1,16 @@
+.DogList {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DogList-Link {
+  color: black;
+}
+
+.DogList img {
+  display: block;
+  height: 300px;
+}
