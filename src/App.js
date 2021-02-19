@@ -1,14 +1,12 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
-import DogList from "./DogList";
-import DogDetails from "./DogDetails";
 /** import dog images */
 import dukeImg from "./img/duke.jpg";
 import perryImg from "./img/perry.jpg";
 import tubbyImg from "./img/tubby.jpg";
 import whiskeyImg from "./img/whiskey.jpg";
-// import Routes from "./Routes";
+import Routes from "./Routes";
 import './App.css';
 
 function App({ dogs }) {
@@ -16,15 +14,7 @@ function App({ dogs }) {
     <div className="App">
       <BrowserRouter>
         <Navbar dogs={dogs}/>
-        <Switch>
-          <Route exact path="/dogs" >
-            <DogList dogs={dogs}/>
-          </Route>
-          <Route exact path="/dogs/:name">
-            <DogDetails dogs={dogs}/>
-          </Route>
-          <Redirect to="/dogs" />  {/* matches if nothing above matched*/}
-      </Switch>
+        <Routes dogs={dogs}/>
       </BrowserRouter>
     </div>
   );

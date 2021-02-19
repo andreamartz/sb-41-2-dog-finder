@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar({ dogs }) {
   return (
-    <nav>
+    <nav className="Navbar">
       {dogs.map(dog => {
         return (
-          <NavLink exact to={`/dogs/${dog.name}`}>
+          <NavLink className="Navbar-NavLink" exact to={`/dogs/${dog.name}`}>
             {dog.name}
           </NavLink>
         )

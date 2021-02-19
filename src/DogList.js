@@ -9,7 +9,7 @@ function DogList( { dogs }) {
       {dogs.map(dog => {
         return (
           <div className="DogList-DogContainer">
-            <Link to={`/dogs/${dog.name}`}>
+            <Link className="DogList-Link" to={`/dogs/${dog.name}`}>
               <img src={dog.src} alt={`${dog.name} the dog`}/>
               <p>{dog.name}</p>
             </Link>    
